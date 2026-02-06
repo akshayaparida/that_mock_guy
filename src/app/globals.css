@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-gray-950;
+  }
+}
+
+/* NTA Style Palette Colors */
+.status-not-visited {
+  @apply bg-gray-200 text-black;
+}
+.status-not-answered {
+  @apply bg-red-500 text-white;
+}
+.status-answered {
+  @apply bg-green-500 text-white;
+}
+.status-marked {
+  @apply bg-purple-600 text-white rounded-full;
+}
+.status-answered-marked {
+  @apply bg-purple-600 text-white relative;
+}
+/* For answered & marked, we usually put a small green indicator, handle in component */
