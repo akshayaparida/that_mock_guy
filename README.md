@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# That Mock Guy 🎓
+> Minimalist Mock Exam Platform for CUET PG CS Aspirants.
 
-## Getting Started
+![That Mock Guy](public/og-image.png)
 
-First, run the development server:
+A high-performance, distraction-free mock exam application designed to mimic the strict NTA (National Testing Agency) exam pattern while offering a flexible study mode for learning.
 
+## 🚀 Features
+
+### 1. **Exam Mode** (Simulation)
+- **Strict Timer**: 105-minute countdown (auto-submit on zero).
+- **NTA Interface**: Exact color palette for question status (Not Visited, Answered, Marked for Review).
+- **No Distractions**: Full-screen focus, no explanations until submission.
+
+### 2. **Study Mode** (Learning)
+- **Untimed Practice**: Learn at your own pace.
+- **Instant Feedback**: "Check Answer" button reveals correct options immediately.
+- **Detailed Explanations**: Understand the *why* behind every answer.
+
+### 3. **Live Visitor Counter**
+- **Real-time Tracking**: Powered by **Vercel KV (Redis)**.
+- **Unique Logic**: Counts unique aspirants using local storage persistence.
+
+## 🛠️ Tech Stack
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Runtime**: [Bun](https://bun.sh/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand)
+- **Database**: [Vercel KV](https://vercel.com/docs/storage/vercel-kv) (Redis)
+- **Icons**: [Lucide React](https://lucide.dev/)
+
+## 🏃‍♂️ Getting Started
+
+### Prerequisites
+- [Bun](https://bun.sh/) installed (`curl -fsSL https://bun.sh/install | bash`).
+
+### Installation
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/akshayaparida/that_mock_guy.git
+cd that_mock_guy
+bun install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Environment Variables
+For the visitor counter to work in production, you need Vercel KV.
+Locally, it falls back to a file (`local-visitor-count.txt`), so **no .env is required for local dev**.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For production (Vercel):
+```env
+KV_REST_API_URL="your_vercel_kv_url"
+KV_REST_API_TOKEN="your_vercel_kv_token"
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Run Locally
+```bash
+bun dev
+```
+Open [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## 🤝 Contributing
+1. Fork the repo.
+2. Create feature branch (`git checkout -b feature/amazing-feature`).
+3. Commit changes (`git commit -m 'Add amazing feature'`).
+4. Push to branch (`git push origin feature/amazing-feature`).
+5. Open a Pull Request.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+MIT License.
