@@ -19,7 +19,7 @@ export default function Home() {
     <div className="min-h-screen bg-zinc-50 flex flex-col font-sans text-zinc-900 selection:bg-zinc-200">
       {/* Header */}
       <header className="px-6 py-6 flex justify-between items-center max-w-5xl mx-auto w-full" role="banner">
-        <div className="flex items-center gap-2">
+       <div className="flex items-center gap-2">
            <h1 className="text-xl font-bold tracking-tight">That Mock Guy</h1>
         </div>
         <VisitorCounter />
