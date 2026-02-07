@@ -64,7 +64,7 @@ export const MOCK_QUESTIONS: Question[] = [
     correctAnswer: 3,
     explanation: "The standard process states are New, Ready, Running, Blocked (Waiting), and Terminated. 'Deleted' is not a standard process state terminology; 'Terminated' is used instead.",
     learningResources: [
-      "https://www.geeksforgeeks.org/process-states-in-operating-systems/",
+      "https://www.geeksforgeeks.org/introduction-of-process-management/",
       "https://www.tutorialspoint.com/operating_system/os_processes.htm",
       "https://en.wikipedia.org/wiki/Process_state"
     ],
