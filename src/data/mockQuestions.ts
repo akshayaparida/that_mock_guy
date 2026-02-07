@@ -66,7 +66,7 @@ export const MOCK_QUESTIONS: Question[] = [
     learningResources: [
       "https://www.geeksforgeeks.org/process-states-in-operating-systems/",
       "https://www.tutorialspoint.com/operating_system/os_processes.htm",
-      "https://www.javatpoint.com/os-process-state"
+      "https://en.wikipedia.org/wiki/Process_state"
     ],
     difficulty: 'medium',
     topicTags: ['Process States', 'OS Fundamentals', 'Operating Systems']
@@ -85,8 +85,8 @@ export const MOCK_QUESTIONS: Question[] = [
     explanation: "The Network Layer (Layer 3) is responsible for routing (path determination) and logical addressing (IP addressing). The Data Link layer handles physical addressing (MAC) and framing.",
     learningResources: [
       "https://www.geeksforgeeks.org/layers-of-osi-model/",
-      "https://www.cisco.com/c/en/us/support/docs/routers/1000-series-routers-ceos/216288-understanding-the-seven-layers-of-the-os.html",
-      "https://www.tutorialspoint.com/computer_network/network_osi_model.htm"
+      "https://www.cloudflare.com/learning/ddos/glossary/open-systems-interconnection-model-osi/",
+      "https://en.wikipedia.org/wiki/OSI_model"
     ],
     difficulty: 'medium',
     topicTags: ['OSI Model', 'Network Layer', 'Routing', 'Computer Networks']
@@ -106,7 +106,7 @@ export const MOCK_QUESTIONS: Question[] = [
     learningResources: [
       "https://www.geeksforgeeks.org/database-normalization/",
       "https://www.w3schools.in/dbms/database-normalization/",
-      "https://www.tutorialspoint.com/dbms/database_normal_forms.htm"
+      "https://learn.microsoft.com/en-us/office/troubleshoot/access/database-normalization-description"
     ],
     difficulty: 'hard',
     topicTags: ['Normalization', '3NF', 'Database Design', 'DBMS']
