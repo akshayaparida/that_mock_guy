@@ -11,7 +11,7 @@ export type ExamState = {
   isSubmitted: boolean;
   score: number;
   mode: 'exam' | 'study';
-  bookmarks: number[]; // Array of question IDs that are bookmarked
+
   notes: Record<number, string>; // questionId -> note text
 
   // Actions
@@ -23,7 +23,7 @@ export type ExamState = {
   clearResponse: () => void;
   submitExam: () => void;
   tickTimer: () => void;
-  toggleBookmark: (questionId: number) => void;
+
   addNote: (questionId: number, note: string) => void;
   getNote: (questionId: number) => string | undefined;
 };
@@ -39,7 +39,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
   isSubmitted: false,
   score: 0,
   mode: 'exam',
-  bookmarks: [],
+
   notes: {},
 
   setMode: (mode) => set({ mode }),
@@ -137,20 +137,7 @@ export const useExamStore = create<ExamState>((set, get) => ({
     set({ timeLeft: timeLeft - 1 });
   },
 
-  toggleBookmark: (questionId: number) => {
-    set(state => {
-      const newBookmarks = [...state.bookmarks];
-      const index = newBookmarks.indexOf(questionId);
 
-      if (index >= 0) {
-        newBookmarks.splice(index, 1); // Remove bookmark
-      } else {
-        newBookmarks.push(questionId); // Add bookmark
-      }
-
-      return { bookmarks: newBookmarks };
-    });
-  },
 
   addNote: (questionId: number, note: string) => {
     set(state => ({
