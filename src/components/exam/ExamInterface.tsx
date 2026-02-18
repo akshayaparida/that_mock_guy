@@ -28,12 +28,12 @@ export default function ExamInterface() {
           <ControlPanel />
         </div>
 
-        {/* Right Side: Palette and Progress Tracker */}
-        <div className="w-[350px] shrink-0 border-l border-gray-300 h-full flex flex-col">
-          <div className="flex-1 overflow-y-auto">
+        {/* Right Side: Progress Tracker + Question Palette */}
+        <div className="w-[350px] shrink-0 border-l border-gray-300 h-full flex flex-col overflow-hidden">
+          <div className="shrink-0 border-b border-gray-300">
             <ProgressTracker />
           </div>
-          <div className="border-t border-gray-300">
+          <div className="flex-1 overflow-hidden">
             <QuestionPalette />
           </div>
         </div>

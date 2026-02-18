@@ -29,12 +29,12 @@ export default function QuestionPalette() {
   };
 
   return (
-    <div className="h-full flex flex-col bg-blue-50/50 border-l border-gray-300">
-      <div className="p-2 bg-blue-100 font-bold text-center border-b border-gray-300">
+    <div className="h-full flex flex-col bg-blue-50/50">
+      <div className="p-2 bg-blue-100 font-bold text-center border-b border-gray-300 shrink-0">
         Question Palette
       </div>
 
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="flex-1 overflow-y-auto p-4 min-h-0">
         <div className="grid grid-cols-5 gap-2">
           {MOCK_QUESTIONS.map((q, index) => {
             const qStatus = status[q.id];
@@ -70,7 +70,7 @@ export default function QuestionPalette() {
       </div>
 
       {/* Navigation controls */}
-      <div className="p-3 bg-gray-100 border-t border-gray-300">
+      <div className="p-3 bg-gray-100 border-t border-gray-300 shrink-0">
         <div className="flex justify-between">
           <button
             onClick={() => navigateQuestion('prev')}
@@ -98,7 +98,7 @@ export default function QuestionPalette() {
         </div>
       </div>
 
-      <div className="p-4 bg-gray-100 border-t border-gray-300 text-xs space-y-2">
+      <div className="p-4 bg-gray-100 border-t border-gray-300 text-xs space-y-2 shrink-0">
         <h4 className="font-bold mb-2">Legend:</h4>
         <div className="grid grid-cols-2 gap-2">
            <div className="flex items-center gap-2">
